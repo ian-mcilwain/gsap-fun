@@ -1,0 +1,63 @@
+@import 'node_modules/modern-normalize/modern-normalize.css';
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    section {
+        padding: 5rem 0;
+        div.container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    }
+}
+
+main section div.container div.marquee {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-image: url("assets/marquee frame.avif");
+    position: relative;
+    background-size: 90%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    
+}
+
+main section div.container div.marquee img.purpleBackground {
+    position: absolute;
+    inset: -50px 0 0 50%;
+    transform: translate(-50%);
+    width: 150%;
+}
+
+main section div.container div.marquee div.marqueeContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    img {
+        width: 150%;
+        /* background-color: pink; */
+    }
+}
+
+main section div.container div.marquee div.marqueeContent::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    right: -150%;
+    background-image: url('assets/marquee.avif');
+    background-size: cover;
+    /* background-color: green; */
+}
